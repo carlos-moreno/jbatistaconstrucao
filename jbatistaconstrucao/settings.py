@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "jbatistaconstrucao.core",
+    "froala_editor",
 ]
 
 MIDDLEWARE = [
@@ -115,6 +116,10 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles/"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = BASE_DIR / "media"
+
 
 # Email configuration
 EMAIL_BACKEND = config("EMAIL_BACKEND")
