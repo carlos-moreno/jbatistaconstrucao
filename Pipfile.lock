@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9eb72f6de5d90a1a2f9dc2db2b558f302f0041dab64fa1a7e08ab097f6679550"
+            "sha256": "f0f6773d89e8ffdae591419844c3a521ac2cecff9eb47d9452a0d010e8c1a5d9"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +39,13 @@
             ],
             "index": "pypi",
             "version": "==3.1.1"
+        },
+        "django-froala-editor": {
+            "hashes": [
+                "sha256:871cc262121b42dd156a2aff5ed934743ed60c21ee3f0fbf871b580c8b87f55b"
+            ],
+            "index": "pypi",
+            "version": "==3.2.2"
         },
         "psycopg2-binary": {
             "hashes": [

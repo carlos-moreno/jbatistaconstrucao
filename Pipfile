@@ -10,6 +10,7 @@ django = "*"
 psycopg2-binary = "*"
 python-decouple = "*"
 dj-database-url = "*"
+django-froala-editor = "*"
 
 [requires]
 python_version = "3.8"
