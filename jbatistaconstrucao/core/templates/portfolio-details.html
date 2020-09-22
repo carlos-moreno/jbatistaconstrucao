@@ -6,13 +6,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Regna Bootstrap Template</title>
+  <title>Portfolio Details - Regna Bootstrap Template</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{% static 'img/favicon.png' %}" rel="icon">
-  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
@@ -38,21 +38,61 @@
 
 <body>
 
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt=""></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1><a href="#hero">Regna</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'home' %}#about">Sobre Nós</a></li>
+          <li><a href="{% url 'home' %}#services">Serviços</a></li>
+          <li><a href="{% url 'home' %}#portfolio">Portfólio</a></li>
+          <li><a href="{% url 'home' %}#team">Equipe</a></li>
+          <li><a href="{% url 'home' %}#contact">Fale Conosco</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
   <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section id="about">
-      <h1>{{ portfolio.name }}</h1>
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
 
-      {{ portfolio.content|safe }}
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>{{ portfolio.name}}</h2>
+          <ol>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li>Portfólio</li>
+            <li>Detalhes do Portfólio</li>
+          </ol>
+        </div>
 
-    </section><!-- End About Section -->
+      </div>
+    </section><!-- Breadcrumbs Section -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section class="portfolio-details">
+      <div class="container">
+        <h3>{{ portfolio.name }}</h3>
+        {{ portfolio.content|safe }}
+
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <a href="{% url 'home' %}" class="btn btn-secondary btn-sm" ><i class="fa fa-chevron-left"></i></a>
     <div class="footer-top">
       <div class="container">
 
@@ -74,6 +114,8 @@
       </div>
     </div>
   </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
